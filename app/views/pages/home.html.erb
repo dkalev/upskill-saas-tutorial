@@ -8,14 +8,14 @@
       <div class="well">
         <h2 class="text-center">Basic Membership</h2>
         <h4 class="text-center">Get basic access to the DevMatch community for free.</h4>
-        <%= link_to "Sign up with Basic", "#", class: "btn btn-primary btn-lg btn-block" %>
+        <%= link_to "Sign up with Basic", new_user_registration_path(plan: @basic_plan.id), class: "btn btn-primary btn-lg btn-block" %>
       </div>  <!--End of Well-->
     </div>  <!--End of Column-->
     <div class="col-md-6">
       <div class="well">
         <h2 class="text-center">Premium Membership</h2>
         <h4 class="text-center">Get premium access to the DevMatch community for $10/month.</h4>
-        <%= link_to "Sign up with Premium", "#", class: "btn btn-success btn-lg btn-block" %>
+        <%= link_to "Sign up with Premium", new_user_registration_path(plan: @premium_plan.id), class: "btn btn-success btn-lg btn-block" %>
       </div>  <!--End of Well-->
     </div>  <!--End of Column-->
   </div>  <!--End of Row-->
