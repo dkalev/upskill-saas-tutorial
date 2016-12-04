@@ -1,12 +1,12 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   def create
-    super do |resourse|
+    super do |resource|
       if params[:plan]
-        resourse.id = params[:plan]
-        if resourse.id == 2
-          resourse.save_with_subscription
+        resource.plan_id = params[:plan]
+        if resource.plan_id == 2
+          resource.save_with_subscription
         else
-          resourse.save
+          resource.save
         end
       end
     end
